@@ -57,6 +57,9 @@ def get_dish_by_id(dish_id):
     # Function to get a dish by its ID
     dish = dishes_collection.find_one({'id': dish_id})
     return dish
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
 
 @app.route('/dishes', methods=['GET'])
 def get_dishes():
